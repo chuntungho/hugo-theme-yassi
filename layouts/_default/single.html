@@ -11,12 +11,9 @@
 <h1 align="center">{{ .Title }}</h1>
 <p align="center" class="summary">{{.Summary}}</p>
 
-
-{{ if .Params.main_image }}
 <div align="center">
   <img class="main-image" src="{{ .Params.main_image }}" alt="{{ .Title }}">
 </div>
-{{ end }}
 
   <div class="content">
     {{ .Content }}
