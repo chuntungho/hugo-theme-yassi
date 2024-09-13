@@ -1,7 +1,25 @@
 {{ define "main" }}
-  {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+
+<div class="content">
+  <div align="center">
+    <div class="cover-content">
+      <img width="{{ site.Params.CoverImageWidth }}" class="cover-image" src="{{ site.Params.CoverImage }}" />
+      <div class="cover-intro">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+    <ul class="home-list">
+      {{ range site.RegularPages}}
+      <li class="home-list-div">
+        <a href="{{ .RelPermalink }}" class="home-list-link">
+          <span class="home-list-date">{{ .Date | time.Format ":date_medium" }}</span>
+          <span class="home-list-title">{{.LinkTitle}}</span>
+          <span class="home-list-duration">{{.ReadingTime }} min read</span>
+        </a>
+      </li>
+    
+      {{ end }}
+    </ul>
+</div>
 {{ end }}
