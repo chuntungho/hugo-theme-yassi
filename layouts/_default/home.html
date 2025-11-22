@@ -14,7 +14,58 @@
   {{ $projects := where site.RegularPages "Section" "projects" }}
   {{ if $projects }}
   <section class="featured-section">
-    <h2 class="featured-title">FEATURED PROJECTS</h2>
+    {{ if site.Params.useProjectCarousel }}
+    <!-- Carousel Layout -->
+    <div class="featured-header">
+      <h2 class="featured-title">FEATURED PROJECTS</h2>
+      <div class="carousel-controls">
+        <button class="carousel-btn carousel-btn-prev" aria-label="Previous">‹</button>
+        <button class="carousel-btn carousel-btn-next" aria-label="Next">›</button>
+      </div>
+    </div>
+    <div class="carousel-container">
+      <div class="featured-carousel">
+        {{ range $projects }}
+        <article class="featured-card">
+          {{ $projectUrl := .RelPermalink }}
+          {{ $isExternal := false }}
+          {{ if .Params.project_url }}
+          {{ $projectUrl = .Params.project_url }}
+          {{ $isExternal = true }}
+          {{ end }}
+          <a href="{{ $projectUrl }}" {{ if $isExternal }}target="_blank" rel="noopener noreferrer" {{ end }}>
+            {{ if .Params.main_image }}
+            <div class="featured-image" style="background-image: url('{{ .Params.main_image }}');">
+              <div class="featured-overlay">
+                <h3 class="featured-card-title">
+                  {{ .Title }}
+                  {{ if $isExternal }}<span class="external-link-icon">↗</span>{{ end }}
+                </h3>
+              </div>
+            </div>
+            {{ else }}
+            <div class="featured-image featured-no-image">
+              <div class="featured-overlay">
+                <h3 class="featured-card-title">
+                  {{ .Title }}
+                  {{ if $isExternal }}<span class="external-link-icon">↗</span>{{ end }}
+                </h3>
+              </div>
+            </div>
+            {{ end }}
+            {{ if .Params.summary }}
+            <p class="featured-summary">{{ .Params.summary }}</p>
+            {{ end }}
+          </a>
+        </article>
+        {{ end }}
+      </div>
+    </div>
+    {{ else }}
+    <!-- Grid Layout -->
+    <div class="featured-header">
+      <h2 class="featured-title">FEATURED PROJECTS</h2>
+    </div>
     <div class="featured-grid">
       {{ range $projects }}
       <article class="featured-card">
@@ -51,6 +102,7 @@
       </article>
       {{ end }}
     </div>
+    {{ end }}
   </section>
   {{ end }}
 
