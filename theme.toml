@@ -1,7 +1,8 @@
 name = 'yassi'
 license = 'MIT'
 licenselink = 'https://github.com/yassi/hugo-theme-yassi/LICENSE'
-description = 'Simple modern theme'
+description = 'Simple personal blog theme aimed at showcasing both projects and blog posts'
+min_version = "0.133.1"
 
 # The home page of the theme, where the source can be found
 homepage = 'https://github.com/yassi/hugo-theme-yassi'
@@ -10,10 +11,10 @@ homepage = 'https://github.com/yassi/hugo-theme-yassi'
 demosite = 'https://yassi.dev'
 
 # Taxonomy terms
-tags = ['blog', 'company']
-features = ['some', 'awesome', 'features']
+tags = ['blog', 'personal', 'dark mode', 'portfolio', 'light', 'dark']
+features = ['dark mode', 'carousels', 'social links']
 
 # If the theme has a single author
 [author]
-  name = 'yassi'
+  name = 'Yasser Toruno'
   homepage = 'yassi.dev'
