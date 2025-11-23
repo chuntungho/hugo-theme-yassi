@@ -20,6 +20,40 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('theme', newTheme);
         });
     }
+
+    // Mobile Menu Toggle
+    const navbarToggle = document.getElementById('navbar-toggle');
+    const navbarMenu = document.getElementById('navbar-menu');
+    const body = document.body;
+
+    if (navbarToggle && navbarMenu) {
+        navbarToggle.addEventListener('click', function () {
+            navbarToggle.classList.toggle('active');
+            navbarMenu.classList.toggle('active');
+            body.classList.toggle('menu-open');
+        });
+
+        // Close menu when clicking outside
+        body.addEventListener('click', function (e) {
+            if (navbarMenu.classList.contains('active') &&
+                !navbarMenu.contains(e.target) &&
+                !navbarToggle.contains(e.target)) {
+                navbarToggle.classList.remove('active');
+                navbarMenu.classList.remove('active');
+                body.classList.remove('menu-open');
+            }
+        });
+
+        // Close menu when clicking on a link
+        const menuLinks = navbarMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navbarToggle.classList.remove('active');
+                navbarMenu.classList.remove('active');
+                body.classList.remove('menu-open');
+            });
+        });
+    }
 });
 
 // Carousel functionality

@@ -1,17 +1,27 @@
-<header>
-    <div class="header-wrapper">
-        <nav class="navbar" role="navigation">
-            <div class="navbar-brand"><a href="/">{{ site.Title }}</a></div>
-            <div class="navbar-left">
-                <div class="navbar-left-menu">
-                    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-                </div>
-    
+<div class="header-wrapper">
+    <nav class="navbar" role="navigation">
+        <!-- Brand -->
+        <div class="navbar-brand">
+            <a href="/">{{ site.Title }}</a>
+        </div>
+
+        <!-- Hamburger Menu Button (Mobile) -->
+        <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Navigation Items -->
+        <div class="navbar-menu" id="navbar-menu">
+            <div class="navbar-nav">
+                {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+                <a href="/projects">Projects</a>
             </div>
-            <div class="navbar-right">
-                <a href="/projects"><strong>Projects</strong></a>
+            <div class="navbar-actions">
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
                         <circle cx="12" cy="12" r="5"></circle>
                         <line x1="12" y1="1" x2="12" y2="3"></line>
                         <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -22,11 +32,12 @@
                         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
-                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
             </div>
-        </nav>
-    </div>
-</header>
+        </div>
+    </nav>
+</div>
