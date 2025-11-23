@@ -10,6 +10,10 @@
       <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
       <span class="post-meta-separator">•</span>
       <span>{{.ReadingTime}} min read</span>
+      {{ if .Params.categories }}
+      <span class="post-meta-separator">•</span>
+      {{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
+      {{ end }}
       {{ if .Params.tags }}
       <span class="post-meta-separator">•</span>
       {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}

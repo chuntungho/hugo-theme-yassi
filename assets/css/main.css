@@ -458,10 +458,15 @@ a {
   color: var(--text-quaternary);
   margin-bottom: 1.5em;
   font-weight: 500;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  row-gap: 12px;
 }
 
 .post-meta-separator {
-  margin: 0 0.5em;
+  margin: 0 4px;
 }
 
 .post-summary {
@@ -653,35 +658,48 @@ h2 {
 }
 
 .terms-wrapper {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .terms-label {
-  display: none;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
 }
 
 .terms-list {
   list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-  display: inline;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
 .terms-item {
   display: inline-block;
-  margin-right: 0.5em;
 }
 
 .terms-item a {
-  color: var(--link-color);
-  font-size: 14px;
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 13px;
   font-weight: 500;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
 }
 
 .terms-item a:hover {
-  opacity: 0.7;
+  background: var(--link-color);
+  color: var(--bg-primary);
+  border-color: var(--link-color);
 }
 
 .copyright {
