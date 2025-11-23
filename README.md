@@ -121,7 +121,7 @@ title = "Your Site Title"
 theme = "yassi"
 
 [params]
-  CoverImage = "/path/to/cover-image.jpg"
+  CoverImage = "/images/avatar.svg"  # or your own image
   CoverImageWidth = 150
   
   # Project display mode
