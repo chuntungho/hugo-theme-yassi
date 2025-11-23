@@ -66,10 +66,6 @@ header {
   flex-shrink: 0;
 }
 
-main {
-  margin: 0 auto;
-  max-width: 1200px;
-}
 
 .header-wrapper {
   margin: 0 auto;
@@ -93,6 +89,22 @@ a {
   margin-left: auto;
   margin-right: auto;
   max-width: 900px;
+  padding: 0 20px;
+  text-align: left !important;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5em;
+  color: var(--text-primary);
+  text-align: left !important;
+}
+
+.content ul,
+.content ol {
+  text-align: left !important;
 }
 
 .post-content {
@@ -637,6 +649,69 @@ h2 {
   padding-left: 20px;
 }
 
+/* Tag Cloud */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 40px 0;
+  line-height: 2;
+}
+
+.tag-cloud-item {
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--border-color);
+  font-weight: 500;
+}
+
+.tag-cloud-item:hover {
+  background: var(--link-color);
+  color: white;
+  border-color: var(--link-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow-sm);
+}
+
+.tag-count {
+  font-size: 0.85em;
+  opacity: 0.7;
+  margin-left: 4px;
+}
+
+/* Tag weights for word cloud effect */
+.tag-weight-1 {
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+
+.tag-weight-2 {
+  font-size: 1em;
+  opacity: 0.8;
+}
+
+.tag-weight-3 {
+  font-size: 1.15em;
+  opacity: 0.9;
+}
+
+.tag-weight-4 {
+  font-size: 1.35em;
+  font-weight: 600;
+}
+
+.tag-weight-5 {
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
 /* Featured Projects Section */
 .featured-section {
   margin-top: 60px;
@@ -719,9 +794,6 @@ h2 {
 }
 
 /* Projects list page specific styling */
-.content h1 {
-  margin-bottom: 40px;
-}
 
 .featured-grid {
   display: grid;
