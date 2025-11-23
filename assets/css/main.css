@@ -228,18 +228,22 @@ a {
 
 .sun-icon {
   display: none;
+  color: #fbbf24;
 }
 
 .moon-icon {
   display: block;
+  color: #3b82f6;
 }
 
 [data-theme="dark"] .sun-icon {
   display: block;
+  color: #fbbf24;
 }
 
 [data-theme="dark"] .moon-icon {
   display: none;
+  color: #3b82f6;
 }
 
 .home-list {
