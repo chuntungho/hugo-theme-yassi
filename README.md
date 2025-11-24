@@ -9,11 +9,11 @@ Example site: [yassi.dev](https://yassi.dev)
 <table>
   <tr>
     <td width="50%">
-      <img src="screenshot-light.png" alt="Light Mode Screenshot" />
+      <img src="/images/screenshot-light.png" alt="Light Mode Screenshot" />
       <p align="center"><b>Light Mode</b></p>
     </td>
     <td width="50%">
-      <img src="screenshot-dark.png" alt="Dark Mode Screenshot" />
+      <img src="/images/screenshot-dark.png" alt="Dark Mode Screenshot" />
       <p align="center"><b>Dark Mode</b></p>
     </td>
   </tr>
