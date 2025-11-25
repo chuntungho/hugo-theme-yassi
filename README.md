@@ -124,6 +124,11 @@ theme = "yassi"
   CoverImage = "/images/avatar.svg"  # or your own image
   CoverImageWidth = 150
   
+  # Theme Colors
+  # Accent color used for site title underline, timeline bullets, and project cards
+  accentColor = "#47b1db"  # Light blue (default)
+  accentColorDark = "#5fc9f0"  # Lighter blue for dark mode
+  
   # Project display mode
   useProjectCarousel = true  # or false for grid
   
@@ -189,11 +194,34 @@ content/
 
 ### Colors
 
-The theme uses CSS variables for easy customization. Override these in your `assets/css/custom.css`:
+#### Accent Color (Easiest)
+
+The quickest way to customize the theme color is via `hugo.toml`:
+
+```toml
+[params]
+  accentColor = "#47b1db"  # Your brand color
+  accentColorDark = "#5fc9f0"  # Variant for dark mode
+```
+
+This controls:
+- Site title underline (normal and hover states)
+- Default avatar/cover image color
+- Post summary left border
+- Timeline bullet borders and fill on hover
+- Timeline post title hover color
+- Category/tag badge hover colors
+- Project card backgrounds (when no image)
+- Word cloud hover colors
+
+#### Advanced Color Customization
+
+For more control, override CSS variables in your `assets/css/custom.css`:
 
 ```css
 :root {
   --link-color: #47b1db;
+  --accent-color: #47b1db;
   --bg-primary: #ffffff;
   --text-primary: #111;
   /* ... more variables */

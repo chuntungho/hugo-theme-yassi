@@ -9,6 +9,7 @@
   --border-color: #e0e0e0;
   --border-light: #e6e6e6;
   --link-color: #47b1db;
+  --accent-color: #47b1db;
   --code-bg: #f5f5f5;
   --code-text: #e83e8c;
   --shadow-sm: rgba(0, 0, 0, 0.1);
@@ -27,6 +28,7 @@
   --border-color: #3a3a3a;
   --border-light: #333;
   --link-color: #5fc9f0;
+  --accent-color: #5fc9f0;
   --code-bg: #2a2a2a;
   --code-text: #ff79c6;
   --shadow-sm: rgba(0, 0, 0, 0.3);
@@ -129,6 +131,13 @@ a {
 .navbar-brand a {
   color: var(--text-primary);
   text-decoration: none;
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+}
+
+.navbar-brand a:hover {
+  border-bottom-color: var(--accent-color);
 }
 
 /* Hamburger Menu Button */
@@ -288,19 +297,19 @@ a {
   width: 14px;
   height: 14px;
   background: var(--bg-primary);
-  border: 3px solid var(--link-color);
+  border: 3px solid var(--accent-color);
   border-radius: 50%;
   z-index: 1;
   transition: all 0.2s ease;
 }
 
 .home-list-link:hover::before {
-  background: var(--link-color);
+  background: var(--accent-color);
   transform: scale(1.3);
 }
 
 .home-list-link:hover .home-list-title {
-  color: var(--link-color);
+  color: var(--accent-color);
 }
 
 .home-list-image {
@@ -480,7 +489,7 @@ a {
   font-style: italic;
   margin: 1.5em auto 0;
   max-width: 680px;
-  border-left: 5px solid var(--link-color);
+  border-left: 5px solid var(--accent-color);
   padding-left: 20px;
   text-align: left;
 }
@@ -701,9 +710,9 @@ h2 {
 }
 
 .terms-item a:hover {
-  background: var(--link-color);
+  background: var(--accent-color);
   color: var(--bg-primary);
-  border-color: var(--link-color);
+  border-color: var(--accent-color);
 }
 
 .copyright {
@@ -718,6 +727,10 @@ h2 {
 
 .cover-content {
   max-width: 500px;
+}
+
+.cover-image {
+  color: var(--accent-color);
 }
 
 .cover-intro {
@@ -831,9 +844,9 @@ h2 {
 }
 
 .tag-cloud-item:hover {
-  background: var(--link-color);
+  background: var(--accent-color);
   color: white;
-  border-color: var(--link-color);
+  border-color: var(--accent-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px var(--shadow-sm);
 }
@@ -1020,7 +1033,7 @@ h2 {
 }
 
 .featured-no-image {
-  background: #47b1db;
+  background: var(--accent-color);
 }
 
 .featured-overlay {
