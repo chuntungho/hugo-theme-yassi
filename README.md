@@ -54,6 +54,7 @@ Configure via `hugo.toml`:
 - Dates positioned on the left
 - Category badges for each post
 - **Optional project integration** - Show selected projects alongside posts with visual distinction
+- **Optional timeline starting point** - Add a custom message at the end of your timeline
 - Clean, scannable design
 - Mobile-responsive with adapted layout
 
@@ -132,6 +133,11 @@ theme = "yassi"
   
   # Project display mode
   useProjectCarousel = true  # or false for grid
+  
+  # Timeline Starting Point (optional)
+  timelineStart = "🚀 And so it begins..."
+  timelineStartSubText = "Additional context or details..."  # optional
+  timelineStartDate = "Jan 2023"  # optional
   
   # Social Media Links
   [params.social]
@@ -290,6 +296,19 @@ The timeline automatically:
 - Displays interactive dots at each entry
 - Truncates summaries to 2 lines
 - Shows category badges
+
+### Timeline Starting Point
+
+You can optionally add a custom message at the end of your timeline (the oldest position) to mark the beginning of your blog:
+
+```toml
+[params]
+  timelineStart = "🚀 This is where it all began..."
+  timelineStartSubText = "Additional context or details..."  # optional
+  timelineStartDate = "Jan 2023"  # optional
+```
+
+This appears as a non-clickable entry at the end of your timeline with a subtle style. Both text fields support markdown formatting. All parameters are optional - omit `timelineStart` to not show a starting point.
 
 ## Browser Support
 

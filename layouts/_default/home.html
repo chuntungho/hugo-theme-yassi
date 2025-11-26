@@ -216,6 +216,23 @@
         </a>
       </li>
       {{ end }}
+
+      <!-- Timeline Starting Point (optional) -->
+      {{ if site.Params.timelineStart }}
+      <li class="home-list-div home-list-start">
+        <div class="home-list-link-static">
+          {{ if site.Params.timelineStartDate }}
+          <span class="home-list-date">{{ site.Params.timelineStartDate }}</span>
+          {{ end }}
+          <div class="home-list-content">
+            <p class="home-list-start-text">{{ site.Params.timelineStart | markdownify }}</p>
+            {{ if site.Params.timelineStartSubText }}
+            <p class="home-list-start-subtext">{{ site.Params.timelineStartSubText | markdownify }}</p>
+            {{ end }}
+          </div>
+        </div>
+      </li>
+      {{ end }}
     </ul>
   </section>
   {{ end }}

@@ -4,6 +4,11 @@ title = 'My New Hugo Site'
 
 [params]
   CoverImage = '/images/cover_image.png'
+  
+  # Timeline Starting Point (optional)
+  # timelineStart = "🚀 And so it begins..."
+  # timelineStartSubText = "Additional context or details..."
+  # timelineStartDate = "Jan 2023"
 
 [[menus.main]]
 name = 'Home'

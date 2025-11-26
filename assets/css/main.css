@@ -404,6 +404,47 @@ a {
   border: 1px solid var(--border-color);
 }
 
+/* Timeline Starting Point */
+.home-list-start {
+  opacity: 0.7;
+}
+
+.home-list-link-static {
+  display: flex;
+  padding: 24px 0;
+  color: var(--text-secondary);
+  position: relative;
+}
+
+.home-list-link-static::before {
+  content: '';
+  position: absolute;
+  left: 94px;
+  top: 28px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 3px solid var(--accent-color);
+  z-index: 2;
+}
+
+.home-list-start-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-tertiary);
+  font-style: italic;
+  margin: 0;
+}
+
+.home-list-start-subtext {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-quaternary);
+  margin: 0 0 0 0;
+  opacity: 0.8;
+}
+
 /* Responsive post listings */
 @media (max-width: 768px) {
   .home-list::before {
@@ -446,6 +487,14 @@ a {
 
   .home-list-tags {
     display: none;
+  }
+
+  .home-list-link-static::before {
+    left: 14px;
+    top: 24px;
+    width: 12px;
+    height: 12px;
+    border-width: 2px;
   }
 }
 
