@@ -95,6 +95,14 @@ Each icon features brand-specific hover colors.
 - Easy configuration with measurement ID
 - Uses Hugo's internal analytics template
 
+### Search
+- Optional fuzzy search powered by Fuse.js
+- Search icon in navbar
+- Modal interface with keyboard shortcuts
+- Searches posts, projects, and content
+- Real-time search results
+- Keyboard navigation (/, Cmd/Ctrl+K to open, ESC to close)
+
 ### Navigation
 - Clean header with brand section
 - Responsive navigation menu
@@ -142,6 +150,9 @@ theme = "yassi"
   
   # Project display mode
   useProjectCarousel = true  # or false for grid
+  
+  # Search
+  enableSearch = true  # Enable site search with Fuse.js
   
   # Timeline Starting Point (optional)
   timelineStart = "🚀 And so it begins..."
@@ -263,6 +274,33 @@ The theme supports Hugo's taxonomy system. Configure in `hugo.toml`:
   tag = "tags"
   category = "categories"
 ```
+
+### Search
+
+The theme includes optional fuzzy search powered by Fuse.js:
+
+```toml
+[outputs]
+  home = ["HTML", "RSS", "JSON"]  # Required for search
+
+[params]
+  enableSearch = true
+```
+
+**Features:**
+- Fuzzy search across all posts and projects
+- Search by title (40%), content (30%), summary (20%), and section (10%)
+- Modal interface with clean design
+- Keyboard shortcuts:
+  - `/` or `Cmd/Ctrl + K` - Open search
+  - `ESC` - Close search
+  - `Arrow keys` - Navigate results
+- Real-time results as you type
+- Shows color-coded section badges (Posts in blue, Projects in green)
+- Mobile responsive
+- Up to 10 results displayed
+
+The search uses a custom JSON index that includes both posts and projects, powered by the vendored Fuse.js library (Apache 2.0 licensed) for client-side fuzzy searching.
 
 ### Google Analytics
 

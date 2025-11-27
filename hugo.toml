@@ -6,8 +6,14 @@ title = 'My New Hugo Site'
   [services.googleAnalytics]
     ID = "G-XXXXXXXXXX"  # Your GA4 measurement ID
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 [params]
   CoverImage = '/images/cover_image.png'
+  
+  # Search
+  enableSearch = false  # Enable/disable site search
   
   # Timeline Starting Point (optional)
   # timelineStart = "🚀 And so it begins..."
