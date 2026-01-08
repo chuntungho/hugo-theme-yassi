@@ -1647,3 +1647,12 @@ h2 {
     font-size: 13px;
   }
 }
+
+/* change backgound color */
+.highlight pre {
+    background-color: #f6f8fa !important;
+}
+
+[data-theme="dark"] .highlight pre {
+    background-color: #272822 !important;
+}
